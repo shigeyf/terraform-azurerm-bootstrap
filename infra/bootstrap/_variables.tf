@@ -90,6 +90,12 @@ variable "bootstrap_config_filename" {
   default     = "./bootstrap.config.json"
 }
 
+variable "bootstrap_backend_filename" {
+  description = "Path to the bootstrap backend Terraform file"
+  type        = string
+  default     = "./backend.tf"
+}
+
 variable "tfbackend_config_template_filename" {
   description = "Path to the backend config template file"
   type        = string

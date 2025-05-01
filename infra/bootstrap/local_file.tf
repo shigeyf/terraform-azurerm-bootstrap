@@ -23,7 +23,7 @@ resource "local_file" "bootstrap_config" {
 }
 
 resource "local_file" "bootstrap_backend" {
-  filename = "${path.module}/backend.tf"
+  filename = var.bootstrap_backend_filename
   content = templatefile("${path.module}/backend.tftpl", {
     storage_account_name   = local.storage_name
     tfstate_container_name = var.tfstate_container_name
